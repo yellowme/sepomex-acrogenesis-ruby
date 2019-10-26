@@ -4,19 +4,14 @@ require 'active_support/core_ext'
 module SEPOMEX
   class General < ApiClient
     def self.info_zip_code(zip_code:)
-      url = "query/info_cp/#{zip_code}"
+      url = "v2/codigo_postal/#{zip_code}"
       response = api_get(url: url)
-      raise SEPOMEX::RequestError.new(response[:error_message]) if !response.kind_of?(Array) && response[:error] == true
-      payload = response[0]
-      raise SEPOMEX::RequestError.new(payload[:error_message]) if payload[:error] == true
+      raise SEPOMEX::RequestError.new if response[:municipio].blank?
       data = {
-        zip_code: payload[:response][:cp].present? ? payload[:response][:cp] : nil,
-        settlement: payload[:response][:asentamiento].present? ? payload[:response][:asentamiento] : nil,
-        settlement_type: payload[:response][:tipo_asentamiento].present? ? payload[:response][:tipo_asentamiento] : nil,
-        municipality: payload[:response][:municipio].present? ? payload[:response][:municipio] : nil,
-        state: payload[:response][:estado].present? ? payload[:response][:estado] : nil,
-        city: payload[:response][:ciudad].present? ? payload[:response][:ciudad] : nil,
-        country: payload[:response][:pais].present? ? payload[:response][:pais] : nil
+        zip_code: response[:codigo_postal].present? ? response[:codigo_postal] : nil,
+        settlement: response[:colonias][0].present? ? response[:colonias][0] : nil,
+        municipality: response[:municipio].present? ? response[:municipio] : nil,
+        state: response[:estado].present? ? response[:estado] : nil
       }
       SEPOMEX::ZipCode.new(*data.values_at(*SEPOMEX::ZipCode.members))
     end
