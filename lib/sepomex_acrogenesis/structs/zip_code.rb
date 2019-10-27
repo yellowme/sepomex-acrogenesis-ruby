@@ -1,4 +1,4 @@
-module SEPOMEX
+module SEPOMEX_ACROGENESIS
   ZipCode =
     Struct.new(
       :zip_code,
