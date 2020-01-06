@@ -16,11 +16,11 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://rubygems.org/gems/sepomex-acrogenesis-ruby'
   spec.license      = 'MIT'
 
-  spec.add_dependency 'httparty'
-  spec.add_dependency "json"
-  spec.add_dependency 'activesupport'
+  spec.add_dependency 'httparty', "~> 0.17.3"
+  spec.add_dependency "json", "~> 2.2.0"
+  spec.add_dependency 'activesupport', "~> 6.0.2.1"
 
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "webmock"
-  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "rspec", "~> 3.8.0"
+  spec.add_development_dependency "webmock", "~> 3.7.2"
+  spec.add_development_dependency "simplecov", "~> 0.17.0"
 end

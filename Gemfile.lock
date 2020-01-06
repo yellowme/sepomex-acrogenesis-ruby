@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sepomex-acrogenesis (0.1.0)
+    sepomex_acrogenesis (0.1.0)
       activesupport
       httparty
       json
@@ -68,7 +68,7 @@ PLATFORMS
 
 DEPENDENCIES
   rspec
-  sepomex-acrogenesis!
+  sepomex_acrogenesis!
   simplecov
   webmock
 
