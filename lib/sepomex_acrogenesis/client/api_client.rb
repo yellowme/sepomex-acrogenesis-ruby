@@ -1,8 +1,8 @@
 require 'singleton'
 
-module SEPOMEX_ACROGENESIS
+module SEPOMEX_Acrogenesis
   class ApiClient
-    include SEPOMEX_ACROGENESIS::JsonApi
+    include SEPOMEX_Acrogenesis::JsonApi
 
     def self.config
       yield self

@@ -8,7 +8,7 @@ require 'sepomex_acrogenesis/structs/zip_code'
 
 require 'sepomex_acrogenesis/general'
 
-module SEPOMEX_ACROGENESIS
+module SEPOMEX_Acrogenesis
   @api_base = 'https://api-codigos-postales.herokuapp.com/'
 
   def self.config

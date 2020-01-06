@@ -1,2 +1,2 @@
-# sepomex-acrogenesis-ruby
-Ruby Bindings for SEPOMEX API
+# sepomex-acrogenesis
+Ruby Bindings for SEPOMEX Acrogenesis API

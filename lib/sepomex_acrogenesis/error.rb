@@ -1,4 +1,4 @@
-module SEPOMEX_ACROGENESIS
+module SEPOMEX_Acrogenesis
   class Error < StandardError
     attr_reader :response
 
