@@ -5,12 +5,12 @@ require "sepomex_acrogenesis/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "sepomex-acrogenesis"
+  spec.name        = "sepomex_acrogenesis"
   spec.version     = SEPOMEX_Acrogenesis::VERSION
   spec.date        = '2019-10-10'
   spec.summary     = "Ruby Bindings for SEPOMEX Acrogenesis API"
   spec.description = "Ruby Bindings for SEPOMEX Acrogenesis API"
-  spec.files       = ["lib/sepomex-acrogenesis.rb"]
+  spec.files       = ["lib/sepomex_acrogenesis.rb"]
   spec.authors     = ["Yellowme"]
   spec.email       = 'hola@yellowme.mx'
   spec.homepage    = 'https://rubygems.org/gems/sepomex-acrogenesis-ruby'
