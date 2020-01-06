@@ -2,9 +2,9 @@ PATH
   remote: .
   specs:
     sepomex_acrogenesis (0.1.0)
-      activesupport
-      httparty
-      json
+      activesupport (~> 6.0.2.1)
+      httparty (~> 0.17.3)
+      json (~> 2.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -67,10 +67,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rspec
+  rspec (~> 3.8.0)
   sepomex_acrogenesis!
-  simplecov
-  webmock
+  simplecov (~> 0.17.0)
+  webmock (~> 3.7.2)
 
 BUNDLED WITH
    1.17.3
