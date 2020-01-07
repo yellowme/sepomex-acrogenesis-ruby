@@ -10,11 +10,13 @@ Gem::Specification.new do |spec|
   spec.date        = '2019-10-10'
   spec.description = "Ruby Bindings for SEPOMEX Acrogenesis API"
   spec.summary     = "Ruby that provides a library to SEPOMEX Acrogenesis API"
-  spec.files       = ["lib/sepomex_acrogenesis.rb"]
+  spec.files       = `git ls-files`.split($/)
+  spec.executables = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.authors     = ["Yellowme"]
   spec.email       = 'hola@yellowme.mx'
   spec.homepage    = 'https://rubygems.org/gems/sepomex-acrogenesis-ruby'
-  spec.license      = 'MIT'
+  spec.license     = 'MIT'
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'httparty', "~> 0.16.0"
