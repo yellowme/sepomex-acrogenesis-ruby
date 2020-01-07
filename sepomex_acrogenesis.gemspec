@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
   spec.email       = 'hola@yellowme.mx'
   spec.homepage    = 'https://rubygems.org/gems/sepomex-acrogenesis-ruby'
   spec.license      = 'MIT'
+  spec.require_paths = ["lib"]
 
   spec.add_dependency 'httparty', "~> 0.16.0"
   spec.add_dependency "json", "~> 2.0"
